@@ -49,26 +49,39 @@
 										<p>NOTE: If you want to reset your options, hit the reset button..</p>
 										<!-- Base number display -->
 										<!-- Base number display -->
-										<p id="base-number">41270</p>
+										<h1 id="base-number">41270</h1>
 
 										<!-- Button to add 475 -->
+										<p>EXTERIOR</p>
 										<button id="add-475-button">Wind Chill Pearl</button>
 										<button id="add-2000-button">Midnight Black Metallic</button>
+										<button id="celestial-silver-metallic">Celestial Silver Metallic</button>
+										<button id="magnetic-gray-metallic">Magnetic Gray Metallic</button>
+										<button id="cypress">Cypress</button>
+										<button id="blueprint">Blueprint</button>
+										<button id="ruby-flare-pearl">Ruby Flare Pearl</button>
+										<p>INTERIOR:</p>
+										<button id="graphite-fabric">Graphite Fabric</button>
+										<button id="black-fabric">Black Fabric</button>
+										<p>Drivetrain(NOTE: You can only choose once. If you want to change your mind, click reset.):</p>
+										<button id="add-1600-button">AWD(All Wheel Drive)  + $1600 MSRP</button>
+										<button id="subtract-1600-button">FWD(Front Wheel Drive)</button>
 										<button id="reset-button">Reset</button>
 										<script>
 										// Get the base number display, add 475 button, add 2000 button, subtract button, reset button, and increment button elements
 										const baseNumberDisplay = document.getElementById('base-number');
 										const add475Button = document.getElementById('add-475-button');
 										const add2000Button = document.getElementById('add-2000-button');
-										const subtractButton = document.getElementById('subtract-button');
+										const frontWheelDrive = document.getElementById('add-1600-button')
 										const resetButton = document.getElementById('reset-button');
-										const incrementButton = document.getElementById('increment-button');
+										const ruby = document.getElementById('ruby-flare-pearl');
 										
 										// Set the base number and the numbers to add and subtract
 										let baseNumber = 39820;
 										const numberToAdd475 = 475;
 										const numberToAdd2000 = 0;
 										const numberToSubtract = 5;
+										const numberToAdd1600 = 1600;
 										
 										// Add event listener to the add 475 button
 										add475Button.addEventListener('click', () => {
@@ -76,7 +89,14 @@
 										  baseNumber += numberToAdd475;
 										  baseNumberDisplay.textContent = baseNumber;
 										});
-										
+										ruby.addEventListener('click', () => {
+										  baseNumber += numberToAdd475;
+										  baseNumberDisplay.textContent = baseNumber
+										})
+										frontWheelDrive.addEventListener('click', () => {
+										  baseNumber += numberToAdd1600;
+										  baseNumberDisplay.textContent = baseNumber;
+										});
 										// Add event listener to the add 2000 button
 										add2000Button.addEventListener('click', () => {
 										  // Update the base number
@@ -97,6 +117,29 @@
 							</section>
 
 						<!-- First Section -->
+							<section id="first" class="main special">
+								<header class="major">
+									<h2>Powertrain</h2>
+								</header>
+								<ul class="features">
+									<li>
+										<span class="icon solid major style1 fa-code"></span>
+										<h3>Engine</h3>
+										<p>2.4L 4-Cyl. Turbo Engine</p>
+									</li>
+									<li>
+										<span class="icon major style3 fa-copy"></span>
+										<h3>Transmission</h3>
+										<p>Direct Shift 8-Speed Electronically Controlled automatic Transmission (ECT)</p>
+									</li>
+								</ul>
+								<footer class="major">
+									<ul class="actions special">
+										<li><a href="generic.html" class="button">Learn More</a></li>
+									</ul>
+								</footer>
+							</section>
+
 							
 
 						<!-- Second Section -->
