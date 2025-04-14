@@ -21,8 +21,8 @@
 					<header id="header" class="alt">
 						<span class="logo"><img src="images2/logo.svg" alt="" /></span>
 						<h1>Stellar</h1>
-						<p>Just another free, fully responsive site template<br />
-						built for NSVAAARGSP.</p>
+						<p>Elements of the Toyota Highlander LE<br />
+						built for the car pricing of the Toyota Highlander LE.</p>
 					</header>
 
 				<!-- Nav -->
@@ -49,24 +49,26 @@
 										<p>NOTE: You can only choose one. If you want to change your mind, then reload this website.</p>
 										<!-- Base number display -->
 										<p id="base-number">39,820</p>
-
-
-<!-- Button to add a certain number -->
 										<button id="wind-chill-pearl">Wind Chill Pearl</button>
-										
+										<button id="midnight-black-metallic">Midnight Black Metallic</button>
 										<script>
 										const baseNumberDisplay = document.getElementById('base-number');
 										const addButton = document.getElementById('wind-chill-pearl');
-
-
 										let baseNumber = 39820;
 										const numberToAdd = 475;
-
-
 										addButton.addEventListener('click', () => {
-										  // Update the base number
 										  baseNumber += numberToAdd;
 										  baseNumberDisplay.textContent = baseNumber;
+										});
+										</script>
+										<script>
+										const baseNumberDisplay = document.getElementById('base-number');
+										const addButton2 = document.getElementById('midnight-black-metallic');
+										let baseNumber = 39820;
+										const numberToAdd2 = 0;
+										addButton.addEventListener('click', () =>{
+											baseNumber += numberToAdd2;
+											baseNumberDisplay.textContent = baseNumber;
 										});
 										</script>
 									</div>
