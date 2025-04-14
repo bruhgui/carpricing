@@ -46,28 +46,48 @@
 											<h2>Ipsum sed adipiscing</h2>
 										</header>
 										<p>Choose your color for your Toyota Highlander LE:</p>
-										<p>NOTE: You can only choose one. If you want to change your mind, then reload this website.</p>
+										<p>NOTE: If you want to reset your options, hit the reset button..</p>
 										<!-- Base number display -->
-										<p id="base-number">39,820</p>
-										<button id="wind-chill-pearl">Wind Chill Pearl</button>
-										<button id="midnight-black-metallic">Midnight Black Metallic</button>
+										<!-- Base number display -->
+										<p id="base-number">41270</p>
+
+										<!-- Button to add 475 -->
+										<button id="add-475-button">Wind Chill Pearl</button>
+										<button id="add-2000-button">Midnight Black Metallic</button>
+										<button id="reset-button">Reset</button>
 										<script>
+										// Get the base number display, add 475 button, add 2000 button, subtract button, reset button, and increment button elements
 										const baseNumberDisplay = document.getElementById('base-number');
-										const addButton = document.getElementById('wind-chill-pearl');
+										const add475Button = document.getElementById('add-475-button');
+										const add2000Button = document.getElementById('add-2000-button');
+										const subtractButton = document.getElementById('subtract-button');
+										const resetButton = document.getElementById('reset-button');
+										const incrementButton = document.getElementById('increment-button');
+										
+										// Set the base number and the numbers to add and subtract
 										let baseNumber = 39820;
-										const numberToAdd = 1925;
-										addButton.addEventListener('click', () => {
-										  baseNumber += numberToAdd;
+										const numberToAdd475 = 475;
+										const numberToAdd2000 = 2000;
+										const numberToSubtract = 5;
+										
+										// Add event listener to the add 475 button
+										add475Button.addEventListener('click', () => {
+										  // Update the base number
+										  baseNumber += numberToAdd475;
 										  baseNumberDisplay.textContent = baseNumber;
 										});
-										</script>
-										<script>
-										const baseNumberDisplay = document.getElementById('base-number');
-										const addButton2 = document.getElementById('midnight-black-metallic');
-										let baseNumber = 39820;
-										const numberToAdd2 = 1450;
-										addButton.addEventListener('click', () =>{
-										  baseNumber += numberToAdd2;
+										
+										// Add event listener to the add 2000 button
+										add2000Button.addEventListener('click', () => {
+										  // Update the base number
+										  baseNumber += numberToAdd2000;
+										  baseNumberDisplay.textContent = baseNumber;
+										});
+										
+
+										resetButton.addEventListener('click', () => {
+
+										  baseNumber = 41270;
 										  baseNumberDisplay.textContent = baseNumber;
 										});
 										</script>
